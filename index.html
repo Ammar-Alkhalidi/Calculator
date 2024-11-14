@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>% Calculator</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="jumbotron jumbotron-fluid bg-warning">
+        <div class="container">
+          <h1 class="text-center text-uppercase align-middle">
+            <i class="fas fa-calculator"></i>
+            % Calculator
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <form id="percentage-change-form">
+          <span class="lead"> What is the percentage change between:</span>
+          <div class="form-row align-items-center mb-3">
+            <div class="col">
+              <input
+                type="number"
+                id="change_1"
+                class="difference operand form-control"
+                value="0"
+                step="1"
+              />
+            </div>
+            <span class="lead"> and</span>
+            <div class="col">
+              <input
+                type="number"
+                id="change_2"
+                class="difference operand form-control"
+                value="0"
+                step="1"
+              />
+            </div>
+            <span class="operator font-weight-bold lead">=</span>
+            <div class="col">
+              <input
+                type="number"
+                id="change_result"
+                readonly
+                class="result form-control"
+                value="0"
+                data-operation="percentNumber"
+              />
+            </div>
+            <span class="lead">%</span>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
