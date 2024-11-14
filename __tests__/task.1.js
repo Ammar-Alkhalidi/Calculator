@@ -1,8 +1,10 @@
+// File: tests/task1.test.js
 import puppeteer from "puppeteer";
 import fs from "fs";
 import liveServer from "live-server";
+
 const browserOptions = {
-  headless: "new",
+  headless: true,
   ignoreHTTPSErrors: true,
 };
 
@@ -22,10 +24,8 @@ beforeAll(async () => {
 }, 30000);
 
 afterAll((done) => {
-  try {
-    liveServer.shutdown();
-    this.puppeteer.close();
-  } catch (e) {}
+  liveServer.shutdown();
+  browser.close();
   done();
 });
 

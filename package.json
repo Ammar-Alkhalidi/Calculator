@@ -4,7 +4,7 @@
     "test": "node --experimental-vm-modules node_modules/.bin/jest --runInBand --detectOpenHandles --forceExit"
   },
   "devDependencies": {
-    "jest": "^29.3.1",
+    "jest": "^29.7.0",
     "live-server": "^1.2.2",
     "puppeteer": "^19.4.1"
   },
@@ -13,7 +13,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DCI-Webdev/spa-modules-calculator",
+    "url": "git+https://github.com/DCI-Webdev/spa-modules-calculator.git",
     "id": 813113051
-  }
+  },
+  "name": "spa-modules-calculator-ammar-alkhalidi",
+  "version": "1.0.0",
+  "description": "This calculator app is mostly complete, but will draw on your knowledge of modules and event handlers to finish.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DCI-Webdev/spa-modules-calculator/issues"
+  },
+  "homepage": "https://github.com/DCI-Webdev/spa-modules-calculator#readme"
 }

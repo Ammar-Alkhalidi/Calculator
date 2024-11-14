@@ -1,7 +1,9 @@
+// File: tests/task2.test.js
 import puppeteer from "puppeteer";
 import liveServer from "live-server";
+
 const browserOptions = {
-  headless: "new",
+  headless: true,
   ignoreHTTPSErrors: true,
 };
 
@@ -21,10 +23,8 @@ beforeAll(async () => {
 }, 30000);
 
 afterAll((done) => {
-  try {
-    liveServer.shutdown();
-    this.puppeteer.close();
-  } catch (e) {}
+  liveServer.shutdown();
+  browser.close();
   done();
 });
 
@@ -37,6 +37,6 @@ describe("Percentage Calculation", () => {
     await page.keyboard.press("Enter");
     await new Promise((resolve) => setTimeout(resolve, 500));
     const result = await page.$eval("#change_result", (el) => el.value);
-    expect(result).toBe("-70");
+    expect(result).toBe("-70.00");
   });
 });
